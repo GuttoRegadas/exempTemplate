@@ -1,0 +1,24 @@
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+body {
+    display: block;
+    flex-wrap: wrap;
+}
+
+#about-container{
+    display: block;
+    background-image: url("../img/imagemFiocruzCe.png");
+    background-size: cover;
+
+}
+
+
+#link-container{
+    display: flex
+}
