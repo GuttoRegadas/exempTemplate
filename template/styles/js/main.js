@@ -1,7 +1,5 @@
 /*
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 (function($) {
@@ -19,21 +17,21 @@
 			xxsmall:  [ null,      '360px'  ]
 		});
 
-	// Play initial animations on page load.
+	// Reproduzir animações iniciais no carregamento da página.
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
 
-	// Touch?
+	// Toque?
 		if (browser.mobile)
 			$body.addClass('is-touch');
 
-	// Forms.
+	// Formulário.
 		var $form = $('form');
 
-		// Auto-resizing textareas.
+		// Área de texto com redirecionamento automático.
 			$form.find('textarea').each(function() {
 
 				var $this = $(this),

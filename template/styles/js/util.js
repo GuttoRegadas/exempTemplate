@@ -1,7 +1,7 @@
 (function($) {
 
 	/**
-	 * Generate an indented list of links from a nav. Meant for use with panel().
+	 * Gerar uma lista recuada de links de um "nav". Para ser usado com panel().
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn.navList = function() {
@@ -41,11 +41,11 @@
 	 */
 	$.fn.panel = function(userConfig) {
 
-		// No elements?
+		// Sem elementos?
 			if (this.length == 0)
 				return $this;
 
-		// Multiple elements?
+		// Elementos Multiplos?
 			if (this.length > 1) {
 
 				for (var i=0; i < this.length; i++)
@@ -68,46 +68,46 @@
 				// Delay.
 					delay: 0,
 
-				// Hide panel on link click.
+				// Ocultar painel ao clicar no link..
 					hideOnClick: false,
 
-				// Hide panel on escape keypress.
+				// Ocultar painel ao pressionar a tecla escape.
 					hideOnEscape: false,
 
-				// Hide panel on swipe.
+				// Ocultar painel ao deslizar.
 					hideOnSwipe: false,
 
-				// Reset scroll position on hide.
+				// Redefinir a posição de rolagem ao ocultar.
 					resetScroll: false,
 
-				// Reset forms on hide.
+				// Redefinir formulários em ocultar.
 					resetForms: false,
 
-				// Side of viewport the panel will appear.
+				// Lado da viewport, o painel aparecerá.
 					side: null,
 
-				// Target element for "class".
+				// Elemento de destino para "classe".
 					target: $this,
 
-				// Class to toggle.
+				// Classe para alternar.
 					visibleClass: 'visible'
 
 			}, userConfig);
 
-			// Expand "target" if it's not a jQuery object already.
+			// Expanda "target" se já não for um objeto jQuery.
 				if (typeof config.target != 'jQuery')
 					config.target = $(config.target);
 
-		// Panel.
+		// Painel.
 
 			// Methods.
 				$this._hide = function(event) {
 
-					// Already hidden? Bail.
+					// Já está hide?.
 						if (!config.target.hasClass(config.visibleClass))
 							return;
 
-					// If an event was provided, cancel it.
+					// Se um evento foi entregue, cancele.
 						if (event) {
 
 							event.preventDefault();
